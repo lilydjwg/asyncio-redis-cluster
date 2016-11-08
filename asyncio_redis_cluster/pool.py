@@ -135,6 +135,7 @@ class Pool:
         Proxy to a protocol. (This will choose a protocol instance that's not
         busy in a blocking request or transaction.)
         """
+        @asyncio.coroutine
         def get_key(*args, debug=False):
 
             is_read = False
